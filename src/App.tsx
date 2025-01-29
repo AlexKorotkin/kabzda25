@@ -1,46 +1,17 @@
-
 import './App.css'
+import {Accordion} from "./components/Accordion.tsx";
+import {Rating} from "./components/Rating.tsx";
 
 function App() {
 
   return (
       <>
       <h1>This is App components</h1>
-        <Rating/>
-        <Accordion/>
-
+        <Rating />
+        <Rating />
+        <Accordion titleValue= {"Menu"} collapsed = {true}  />
+        <Accordion titleValue= {"Users"} collapsed = {false} />
       </>
-  )
-}
-
-function Rating(){
-  return (
-      <>
-        <Star/>
-        <Star/>
-        <Star/>
-        <Star/>
-      </>
-  )
-}
-
-function Accordion(){
-  return (
-      <>
-      <h1>Menu</h1>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
-      </>
-  )
-}
-
-function Star(){
-  return (
-      <div>star</div>
   )
 }
 
