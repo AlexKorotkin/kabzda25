@@ -1,18 +1,18 @@
+import {useState} from "react";
 
-
-type OneOffPropsType ={
+/*type OneOffPropsType ={
     on: boolean,
-    setOn: (value: boolean) => void
 
-}
+}*/
 
-const OneOff = (props:OneOffPropsType) => {
+const UncontrolledAccordion = () => {
+    const [on, setOn] = useState(false);
 
     const onStyle = {
         display: "inline-block",
         width:"30px",
         height:"30px",
-        backgroundColor: props.on? "green" : "white",
+        backgroundColor: on? "green" : "white",
         border: "1px solid black",
         cursor: "pointer"
     };
@@ -20,7 +20,7 @@ const OneOff = (props:OneOffPropsType) => {
         display: "inline-block",
         width:"30px",
         height:"30px",
-        backgroundColor: props.on? "white" : "red",
+        backgroundColor: on? "white" : "red",
         border: "1px solid black",
         cursor: "pointer"
     };
@@ -29,7 +29,7 @@ const OneOff = (props:OneOffPropsType) => {
         display: "inline-block",
         width:"15px",
         height:"15px",
-        backgroundColor: props.on? "green" : "red",
+        backgroundColor: on? "green" : "red",
         borderRadius: "10px",
         border: "1px solid black"
     };
@@ -37,11 +37,11 @@ const OneOff = (props:OneOffPropsType) => {
 
     return (
         <div>
-            <div onClick={()=>props.setOn(true)} style={onStyle} >On</div>
-            <div onClick={()=>props.setOn(false)} style={offStyle} >Off</div>
+            <div onClick={()=>setOn(true)} style={onStyle} >On</div>
+            <div onClick={()=>setOn(false)} style={offStyle} >Off</div>
             <span style={indicatorStyle} ></span>
         </div>
     );
 };
 
-export default OneOff;
+export default UncontrolledAccordion;
