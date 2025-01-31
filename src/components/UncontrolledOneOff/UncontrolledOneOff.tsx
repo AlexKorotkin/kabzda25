@@ -5,7 +5,7 @@ import {useState} from "react";
 
 }*/
 
-const UncontrolledAccordion = () => {
+const UncontrolledOneOff = () => {
     const [on, setOn] = useState(false);
 
     const onStyle = {
@@ -44,4 +44,4 @@ const UncontrolledAccordion = () => {
     );
 };
 
-export default UncontrolledAccordion;
+export default UncontrolledOneOff;

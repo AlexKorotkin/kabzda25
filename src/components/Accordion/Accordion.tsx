@@ -1,3 +1,4 @@
+
 type AccordionPropsType = {
     titleValue: string,
     collapsed: boolean,
