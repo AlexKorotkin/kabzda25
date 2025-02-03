@@ -6,6 +6,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating.tsx";
 import {useState} from "react";
 import UncontrolledOneOff from "./components/UncontrolledOneOff/UncontrolledOneOff.tsx";
+import UncontrolledInput from "./components/UncontrolledInput.tsx";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Accordion titleValue={"Users"} collapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed}/>
           <OneOff on={on} setOn ={setOn} />
           <UncontrolledOneOff/>
+          <UncontrolledInput/>
       </>
   )
 }
