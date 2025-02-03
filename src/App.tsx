@@ -6,13 +6,19 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating.tsx";
 import {useState} from "react";
 import UncontrolledOneOff from "./components/UncontrolledOneOff/UncontrolledOneOff.tsx";
-import UncontrolledInput from "./components/UncontrolledInput.tsx";
+import UncontrolledInput from "./components/UncontrolledInput/UncontrolledInput.tsx";
+import ControlledInput from "./components/ControlledInput/ControlledInput.tsx";
+import ControlledCheckBox from "./components/ControlledCheckBox/ControlledCheckBox.tsx";
+import ControlledSelect from "./components/ControlledSelect/ControlledSelect.tsx";
 
 function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     const [on, setOn] = useState(false);
+    const [inputValue, setInputValue] = useState("");
+    const [checked, setChecked] = useState(false);
+    const [selected, setSelected] = useState<string|undefined>(undefined);
 
   return (
       <>
@@ -24,6 +30,9 @@ function App() {
           <OneOff on={on} setOn ={setOn} />
           <UncontrolledOneOff/>
           <UncontrolledInput/>
+          <ControlledInput inputValue={inputValue} setInputValue={setInputValue}/>
+          <ControlledCheckBox checked={checked} setChecked={setChecked}/>
+          <ControlledSelect selected={selected} setSelected={setSelected}/>
       </>
   )
 }
