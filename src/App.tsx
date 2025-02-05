@@ -1,21 +1,21 @@
 import './App.css'
-import {Accordion, ItemsType} from "./components/Accordion/Accordion.tsx";
-import {Rating, RatingValueType} from "./components/Rating/Rating.tsx";
-import OneOff from "./components/OneOff/OneOff.tsx";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion.tsx";
-import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating.tsx";
+import {Accordion, ItemsType} from "./components/Accordion/Accordion";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
+import OneOff from "./components/OneOff/OneOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {useState} from "react";
-import UncontrolledOneOff from "./components/UncontrolledOneOff/UncontrolledOneOff.tsx";
-import UncontrolledInput from "./components/UncontrolledInput/UncontrolledInput.tsx";
-import ControlledInput from "./components/ControlledInput/ControlledInput.tsx";
-import ControlledCheckBox from "./components/ControlledCheckBox/ControlledCheckBox.tsx";
-import ControlledSelect from "./components/ControlledSelect/ControlledSelect.tsx";
-import Select, {citiesType} from "./components/Select/Select.tsx";
+import UncontrolledOneOff from "./components/UncontrolledOneOff/UncontrolledOneOff";
+import UncontrolledInput from "./components/UncontrolledInput/UncontrolledInput";
+import ControlledInput from "./components/ControlledInput/ControlledInput";
+import ControlledCheckBox from "./components/ControlledCheckBox/ControlledCheckBox";
+import ControlledSelect from "./components/ControlledSelect/ControlledSelect";
+import Select, {citiesType} from "./components/Select/Select";
 
 function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
-    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true);
     const [on, setOn] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [checked, setChecked] = useState(false);

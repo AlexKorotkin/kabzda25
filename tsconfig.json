@@ -1,7 +1,22 @@
+/*
 {
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ]
+}
+*/
+
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // или "react" для старых версий React
+    "module": "commonjs", // для Jest
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  }
 }
