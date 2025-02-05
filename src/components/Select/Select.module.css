@@ -1,0 +1,21 @@
+.select .main {
+    border: 1px solid black;
+    display: inline-block;
+
+
+}
+.items {
+    border: 1px solid red;
+    padding: 5px;
+    width: 91px;
+
+}
+.item{
+
+}
+.selected {
+background-color: blue;
+    color: white;
+}
+
+

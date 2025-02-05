@@ -10,7 +10,7 @@ import UncontrolledInput from "./components/UncontrolledInput/UncontrolledInput.
 import ControlledInput from "./components/ControlledInput/ControlledInput.tsx";
 import ControlledCheckBox from "./components/ControlledCheckBox/ControlledCheckBox.tsx";
 import ControlledSelect from "./components/ControlledSelect/ControlledSelect.tsx";
-import Select from "./components/Select/Select.tsx";
+import Select, {citiesType} from "./components/Select/Select.tsx";
 
 function App() {
 
@@ -20,13 +20,19 @@ function App() {
     const [inputValue, setInputValue] = useState("");
     const [checked, setChecked] = useState(false);
     const [selected, setSelected] = useState<string|undefined>(undefined);
-
+    const [selectValue, setSelectValue] = useState("6");
 
     const items: ItemsType[] = [
         {title: "Andrey", id:1},
         {title: "Vadim", id:2},
         {title: "Denis", id:3},
         {title: "Kirill", id:4}
+    ];
+    const cities: citiesType[] = [
+        {title: "Brest", value:"1"},
+        {title: "Mogilev", value:"6"},
+        {title: "Minsk", value:"7"},
+        {title: "Gomel", value:"3"}
     ];
 
   return (
@@ -46,7 +52,7 @@ function App() {
           <ControlledInput inputValue={inputValue} setInputValue={setInputValue}/>
           <ControlledCheckBox checked={checked} setChecked={setChecked}/>
           <ControlledSelect selected={selected} setSelected={setSelected}/>
-          <Select items={items} onChange={} />
+          <Select value = {selectValue} onChange={setSelectValue} items={cities} />
       </>
   )
 }
