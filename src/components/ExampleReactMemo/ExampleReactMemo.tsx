@@ -16,8 +16,8 @@ const Users = React.memo(UsersSecret)
 const ExampleReactMemo = () => {
     const [counter, setCounter] = useState<number>(0)
     const [users, setUsers] = useState<string[]>(["Енот", "Кошка", "Собака"])
-    const addUsers = () => {
 
+    const addUsers = () => {
         return setUsers([...users, "Животное " + new Date().getTime()])
     }
 
