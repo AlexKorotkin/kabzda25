@@ -7,7 +7,7 @@ import {useState, KeyboardEvent, useEffect} from "react";
 }
 type SelectPropsType = {
     value: string,
-    onChange?: (value: string) => void,
+    setSelectValue: (value: string) => void,
     items: Array<citiesType>
 }
 const Select = (props:SelectPropsType) => {
@@ -19,7 +19,7 @@ const Select = (props:SelectPropsType) => {
     const hoveredItem = props.items.find(item => item.value === hoveredElementValue);
     const toggleItems =() => setActive(!active);
     const onItemClick = (value:string) => {
-        props.onChange(value);
+        props.setSelectValue(value);
         toggleItems();
     };
     const onKeyUp = (e:KeyboardEvent<HTMLDivElement>) =>{
@@ -30,13 +30,13 @@ const Select = (props:SelectPropsType) => {
                         ? props.items[i+1]
                         :props.items[i-1];
                     if(pretedentElement){
-                        props.onChange(pretedentElement.value);
+                        props.setSelectValue(pretedentElement.value);
                         return;
                     }
                 }
             }
             if(!selectedItem){
-                props.onChange(props.items[0].value);
+                props.setSelectValue(props.items[0].value);
             }
         }
         if (e.key === 'Enter' || e.key === 'Escape') {
