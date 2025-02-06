@@ -1,9 +1,6 @@
 import {useState} from "react";
 
-/*type OneOffPropsType ={
-    on: boolean,
 
-}*/
 
 const UncontrolledOneOff = () => {
     const [on, setOn] = useState(false);

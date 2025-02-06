@@ -11,6 +11,7 @@ import ControlledInput from "./components/ControlledInput/ControlledInput";
 import ControlledCheckBox from "./components/ControlledCheckBox/ControlledCheckBox";
 import ControlledSelect from "./components/ControlledSelect/ControlledSelect";
 import Select, {citiesType} from "./components/Select/Select";
+import ExampleReactMemo from "./components/ExampleReactMemo/ExampleReactMemo";
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           <ControlledCheckBox checked={checked} setChecked={setChecked}/>
           <ControlledSelect selected={selected} setSelected={setSelected}/>
           <Select value = {selectValue} onChange={setSelectValue} items={cities} />
+          <ExampleReactMemo/>
       </>
   )
 }
