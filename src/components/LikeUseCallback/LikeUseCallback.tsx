@@ -1,9 +1,12 @@
 import React, {useCallback, useState} from "react";
 
 
-const UsersBook = (props: {addBook: ()=> void } ) =>{
+const UsersBook = (props: {addBook: ()=> void, books: string[] } ) =>{
     return <div>
         <button style={{backgroundColor: "blueviolet", padding: "5px"}} onClick={props.addBook}>add user</button>
+        {props.books.map((book, i) => <div key={i}>
+            {book}
+        </div>)}
     </div>
 };
 
@@ -26,7 +29,7 @@ const LikeUseCallback = () => {
         <div>
             <button style={{backgroundColor: "blueviolet", padding: "5px"}} onClick={()=>setCounter(counter+1)}>+</button>
             {counter}
-            <Book  addBook={addBook}/>
+            <Book  addBook={addBook} books={books} />
         </div>
     );
 };
