@@ -15,6 +15,7 @@ import ExampleReactMemo from "./components/ExampleReactMemo/ExampleReactMemo";
 import ExampleUseMemo from "./components/ExampleUseMemo/ExampleUseMemo";
 import HelpsToReactMemo from "./components/HelpsToReactMemo/HelpsToReactMemo";
 import LikeUseCallback from "./components/LikeUseCallback/LikeUseCallback";
+import SimpleExampleUseEffect from "./components/SimpleExampleUseEffect/SimpleExampleUseEffect";
 
 function App() {
 
@@ -61,6 +62,7 @@ function App() {
           <ExampleUseMemo/>
           <HelpsToReactMemo/>
           <LikeUseCallback/>
+          <SimpleExampleUseEffect/>
       </>
   )
 }
